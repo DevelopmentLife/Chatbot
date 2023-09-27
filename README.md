@@ -16,7 +16,7 @@ Our dataset can be found [here](https://www.kaggle.com/datasets/stanfordu/stanfo
 Run the following command:
 
 ```
-git clone git@github.com:developmentlife/chatbot.git
+git clone https://github.com/DevelopmentLife/Chatbot.git
 ```
 
 To contribute to this project:
