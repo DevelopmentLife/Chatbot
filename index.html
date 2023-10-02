@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div id="chat-box">
+        <!-- Chat messages will appear here -->
+    </div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            var user_input = $('#user-input').val();
+            $.post("http://127.0.0.1:5000/chat", { 'user_input': user_input }, function(data) {
+                $('#chat-box').append('<p>You: ' + user_input + '</p>');
+                $('#chat-box').append('<p>Bot: ' + data.response + '</p>');
+            });
+        }
+    </script>
+</body>
+</html>
